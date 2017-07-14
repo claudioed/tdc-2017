@@ -32,6 +32,7 @@ public class ShoppingCartVerticleWithoutCircuitBreaker extends AbstractVerticle 
         );
 
     ServiceDiscovery discovery = ServiceDiscovery.create(vertx,serviceDiscoveryOptions);
+
     router.get("/product/:id").handler(req -> {
       LOGGER.info(" receiving request");
       final String id = req.request().getParam("id");

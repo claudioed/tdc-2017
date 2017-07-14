@@ -9,7 +9,7 @@
   </parent>
 
   <properties>
-    <vertx.verticle>shopping.cart.domain.ShoppingCartVerticleWithoutCircuitBreaker</vertx.verticle>
+    <vertx.verticle>shopping.cart.domain.ShoppingCartVerticleWithCircuitBreaker</vertx.verticle>
   </properties>
 
   <modelVersion>4.0.0</modelVersion>
@@ -46,6 +46,11 @@
     <dependency>
       <groupId>io.vertx</groupId>
       <artifactId>vertx-service-discovery-backend-redis</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-circuit-breaker</artifactId>
     </dependency>
 
   </dependencies>
